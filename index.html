@@ -1,0 +1,457 @@
+<!-- Prueba de módulo 3
+By Sebastián Sánchez -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Para íconos de Fontwaresome -->
+    <script
+      src="https://kit.fontawesome.com/da377f274a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="./assets/img/viajes.svg"
+    />
+    <title>Viajes Chile v2</title>
+  </head>
+  <body>
+    <!-- Navbar - start (fijo arriba) -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top mynav">
+      <div class="container">
+        <div>
+          <a class="navbar-brand" href="#">
+            <img class="mynav__logo" src="./assets/img/viajes.svg" />
+          </a>
+          <span>Viajes Chile</span>
+        </div>
+        <button
+          class="navbar-toggler mynav__toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                onclick="scrollToSection('section1')"
+                aria-current="page"
+                href="#"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-none d-md-block"
+                onclick="scrollToSection('somos')"
+                href="#somos"
+                >Quiénes somos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                onclick="scrollToSection('destacados')"
+                href="#destacados"
+                >Destacados</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                onclick="scrollToSection('testimonios')"
+                href="#testimonios"
+                >Testimonios</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                onclick="scrollToSection('contacto')"
+                href="#contacto"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar - end -->
+    <header>
+      <!-- Carrousel - start -->
+      <section class="mycarousel">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item carousel__item--img active">
+              <img
+                src="./assets/img/carousel1.jpg"
+                class="mycarousel__item--img d-block w-100"
+                alt="imagen del norte"
+              />
+              <!-- Captions -->
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Norte de Chile</h5>
+                <p>La magia del desierto.</p>
+              </div>
+            </div>
+            <div class="carousel-item mycarousel__item--img">
+              <img
+                src="./assets/img/carousel2.jpg"
+                class="mycarousel__item--img d-block w-100"
+                alt="isla de pascua"
+              />
+              <!-- Captions -->
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Isla de Pascua</h5>
+                <p>Una joya en medio del Pacífico.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/img/carousel3.jpg"
+                class="mycarousel__item--img d-block w-100"
+                alt="pingüinito"
+              />
+              <!-- Captions -->
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Amamos y cuidamos la flora y fauna</h5>
+                <p>Conoce la diversidad de las especies.</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <!-- Carrousel - end -->
+    </header>
+    <main class="mymain">
+      <section class="mycontainer col-12" id="somos">
+        <!-- Puse el divider arriba del título porque así funciona mejor según guías de UX Writing -->
+        <hr class="mymain__mydivider" />
+        <span class="mycontainer__title">¿Quiénes somos?</span>
+        <div class="mycontainer__somos col-12">
+          <div class="col-12 col-md-6">
+            <img
+              class="mycontainer__somos--img d-none d-sm-block"
+              src="./assets/img/quienes-somos.jpg"
+              alt="Equipo de viajes Chile"
+            />
+          </div>
+          <div class="col-12 col-md-5 mycontainer__somos--txt">
+            <p>
+              Somos una empresa de viajes en Chile, especializada en ofrecer
+              experiencias únicas y de alta calidad. Con más de 10 años de
+              experiencia, desde Santiago, brindamos viajes personalizados que
+              aseguran la comodidad y satisfacción de nuestros clientes.
+            </p>
+            <p>
+              Nos basamos en la confianza, pasión y excelencia. Superamos las
+              expectativas con viajes exclusivos y personalizados. Si buscas una
+              experiencia única, estás en el lugar indicado.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="mycontainer" id="destacados">
+        <hr class="mymain__mydivider" />
+        <span class="mycontainer__title">Destacados</span>
+        <!-- Cards horizontales -->
+        <div class="mycontainer__destacados row row-cols-1 row-cols-md-2 g-4">
+          <!-- Card horizontal - start -->
+          <div class="col h-100">
+            <div class="card mb-3 mycard" style="width: 100%">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./assets/img/card1.jpg"
+                    class="img-fluid rounded-start mycard__img"
+                    alt="Torres del Paine, lago Pehoe"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title mycard__title">Patagonia</h5>
+                    <p class="card-text">
+                      Una tierra de ensueño, conoce las Torres del Paine ¡y mucho
+                      más!.
+                    </p>
+                  </div>
+                  <div class="card-footer mycard__footer">
+                    <div>
+                      <i class="fa-solid fa-plane"></i>
+                      <span>Vuelos desde</span>
+                    </div>
+                    <span class="mycard__footer--price">$189.990</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card horizontal - end -->
+           <!-- Card horizontal - start -->
+          <div class="col h-100">
+            <div class="card mb-3 mycard" style="width: 100%">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./assets/img/card2.jpg"
+                    class="img-fluid rounded-start mycard__img "
+                    alt="Torres del Paine, lago Pehoe"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title mycard__title">Desierto de Atacama</h5>
+                    <p class="card-text">
+                      Atrévete a conocer el desierto más árido del mundo.
+                    </p>
+                  </div>
+                  <div class="card-footer mycard__footer">
+                    <div>
+                      <i class="fa-solid fa-plane"></i>
+                      <span>Vuelos desde</span>
+                    </div>
+                    <span class="mycard__footer--price">$159.990</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card horizontal - end -->
+           <!-- Card horizontal - start -->
+          <div class="col h-100">
+            <div class="card mb-3 mycard" style="width: 100%">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./assets/img/card3.jpg"
+                    class="img-fluid rounded-start mycard__img"
+                    alt="Torres del Paine, lago Pehoe"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title mycard__title">Norte grande de Chile</h5>
+                    <p class="card-text">
+                      Una basta aventura en cada paso.
+                    </p>
+                  </div>
+                  <div class="card-footer mycard__footer">
+                    <div>
+                      <i class="fa-solid fa-plane"></i>
+                      <span>Vuelos desde</span>
+                    </div>
+                    <span class="mycard__footer--price">$289.990</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card horizontal - end -->
+           <!-- Card horizontal - start -->
+          <div class="col h-100">
+            <div class="card mb-3 mycard" style="width: 100%">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./assets/img/card4.jpg"
+                    class="img-fluid rounded-start mycard__img"
+                    alt="Torres del Paine, lago Pehoe"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title mycard__title">Bosque mágico</h5>
+                    <p class="card-text">
+                      Conoce la selva valdiviana, su paz y secretos más guardados.
+                    </p>
+                  </div>
+                  <div class="card-footer mycard__footer">
+                    <div>
+                      <i class="fa-solid fa-plane"></i>
+                      <span>Vuelos desde</span>
+                    </div>
+                    <span class="mycard__footer--price">$259.990</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card horizontal - end -->
+        </div>
+      </section>
+    </main>
+    <section class="mycontainer col-12" id="testimonios">
+      <hr class="mymain__mydivider" />
+      <span class="mycontainer__title">Testimonios</span>
+      <!-- Testimonio1 -->
+      <div class="mycontainer__feedback col-12">
+        <div class="mycontainer__feedback--subcontainer col-12 col-md-3">
+          <span class="mycontainer__feedback--txt col-12"
+            >"Me encantó mi viaje a Patagonia, el equipo de viajes fue increíble
+            y el itinerario fue muy efectivo. Me hicieron sentir como en casa y
+            me dio una auténtica experiencia."</span
+          >
+          <div class="mycontainer__feedback--persona">
+            <img
+              class="mycontainer__feedback--img col-12 col-md-3"
+              src="./assets/img/testimonio1.jpg"
+            />
+            <span class="mycontainer__feedback--name">Mariela</span>
+          </div>
+        </div>
+        <!-- Testimonio2 -->
+        <div class="mycontainer__feedback--subcontainer col-12 col-md-3">
+          <span class="mycontainer__feedback--txt col-12"
+            >"Me encantó mi viaje a la Selva Valdiviana, hermosa experiencia.
+            Descubrí la belleza natural única de esta región."</span
+          >
+          <div class="mycontainer__feedback--persona">
+            <img
+              class="mycontainer__feedback--img col-12 col-md-3"
+              src="./assets/img/testimonio2.jpg"
+            />
+            <span class="mycontainer__feedback--name">Cristian</span>
+          </div>
+        </div>
+        <!-- Testimonio3 -->
+        <div class="mycontainer__feedback--subcontainer col-12 col-md-3">
+          <span class="mycontainer__feedback--txt col-12"
+            >"Me encantó mi viaje a San Pedro de Atacama, todo fue una
+            maravilla. Me hicieron sentir como en casa y descubrí la belleza
+            natural de este lugar único de Chile."</span
+          >
+          <div class="mycontainer__feedback--persona">
+            <img
+              class="mycontainer__feedback--img col-12 col-md-3"
+              src="./assets/img/testimonio3.jpg"
+            />
+            <span class="mycontainer__feedback--name">Fernanda</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mycontainer col-12" id="contacto">
+      <hr class="mymain__mydivider" />
+      <span class="mycontainer__title">Contacto</span>
+      <div class="mycontainer__contact">
+        <!-- Formulario de contacto -->
+        <form class="myform col-12 col-md-6">
+          <div class="myform__row col-12">
+            <div class="myform__field mb-3">
+              <label for="form__nombre" class="form-label">Nombre</label>
+              <input
+                type="input"
+                class="form-control myform__field--box"
+                id="form__nombre" placeholder="Tu nombre"
+              />
+            </div>
+            <div class="myform__field mb-3">
+              <label for="form__email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control myform__field--box"
+                id="form__email"
+                aria-describedby="emailHelp" placeholder="Tu email"
+              />
+              <!-- <div id="emailHelp" class="form-text">Nunca compartiremos tu correo.</div> -->
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="form__text" class="form-label">Tu mensaje</label>
+            <textarea
+              class="form-control myform__field--box"
+              id="form__text"
+              rows="3" placeholder="Déjanos aquí tu mensaje"
+            ></textarea>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label myform__link" for="exampleCheck1"
+              >Acepto términos y condiciones</label
+            >
+          </div>
+          <button type="submit" class="btn btn-primary myform__button col-12 col-md-3">
+            Enviar
+          </button>
+        </form>
+        <!-- Formulario de contacto - fin -->
+        <div class="contact__container col-12 col-md-5">
+          <div class="contact__subcontainer">
+            <i
+              class="fa-solid fa-mobile-screen contact__subcontainer--icon"
+            ></i>
+            <span class="contact__subcontainer--text">+56 9 3456 4536</span>
+          </div>
+          <div class="contact__subcontainer">
+            <i class="fa-regular fa-envelope contact__subcontainer--icon"></i>
+            <span class="contact__subcontainer--text"
+              >viajes.chile@vchile.cl</span
+            >
+          </div>
+          <div class="contact__subcontainer">
+            <i class="fa-brands fa-linkedin contact__subcontainer--icon"></i>
+            <span class="contact__subcontainer--text">in/viajeschileCL/</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>

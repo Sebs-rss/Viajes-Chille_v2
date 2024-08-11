@@ -1,0 +1,35 @@
+@use "../abstracts/variables";
+
+.contact {
+    
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding-top: 1rem;
+
+    }
+    &__subcontainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+
+        &--text {
+            display: flex;
+            font-family: variables.$myfont;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: variables.$mywhite_txt;
+        }
+    
+        &--icon {
+            display: flex;
+            font-size: 1.15rem;
+            color: variables.$mywhite_txt;
+        }
+
+}
+}

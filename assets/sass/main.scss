@@ -1,0 +1,22 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+//Abstracts
+@import "abstracts/variables", "abstracts/mixins";
+
+//Base
+@import "base/reset", "base/body", "base/html" ,"base/typography";
+
+//Componentes
+@import "components/buttons", "components/forms", "components/cards", "components/carousel";
+
+//Layout
+@import  "layout/header", "layout/main", "layout/footer", "layout/mynav", "layout/contact";
+
+//Pages
+@import "pages/home";
+
+//Themes
+@import "themes/theme";
+
+//Vendors
+@import 'vendors/bootstrap';
