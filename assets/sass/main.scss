@@ -1,4 +1,5 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
+//Vendors
+@import 'vendors/bootstrap';
 
 //Abstracts
 @import "abstracts/variables", "abstracts/mixins";
@@ -18,5 +19,4 @@
 //Themes
 @import "themes/theme";
 
-//Vendors
-@import 'vendors/bootstrap';
+

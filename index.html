@@ -210,12 +210,12 @@ By Sebastián Sánchez -->
         <div class="mycontainer__destacados row row-cols-1 row-cols-md-2 g-4">
           <!-- Card horizontal - start -->
           <div class="col h-100">
-            <div class="card mb-3 mycard" style="width: 100%">
+            <div class="card mb-3 mycard h-100" style="width: 100%">
               <div class="row g-0">
                 <div class="col-md-4">
                   <img
                     src="./assets/img/card1.jpg"
-                    class="img-fluid rounded-start mycard__img"
+                    class="img-fluid rounded-start mycard__img h-100"
                     alt="Torres del Paine, lago Pehoe"
                   />
                 </div>
@@ -241,12 +241,12 @@ By Sebastián Sánchez -->
           <!-- Card horizontal - end -->
            <!-- Card horizontal - start -->
           <div class="col h-100">
-            <div class="card mb-3 mycard" style="width: 100%">
+            <div class="card mb-3 mycard h-100" style="width: 100%">
               <div class="row g-0">
                 <div class="col-md-4">
                   <img
                     src="./assets/img/card2.jpg"
-                    class="img-fluid rounded-start mycard__img "
+                    class="img-fluid rounded-start mycard__img h-100"
                     alt="Torres del Paine, lago Pehoe"
                   />
                 </div>
@@ -276,7 +276,7 @@ By Sebastián Sánchez -->
                 <div class="col-md-4">
                   <img
                     src="./assets/img/card3.jpg"
-                    class="img-fluid rounded-start mycard__img"
+                    class="img-fluid rounded-start mycard__img h-100"
                     alt="Torres del Paine, lago Pehoe"
                   />
                 </div>
@@ -391,7 +391,7 @@ By Sebastián Sánchez -->
         <form class="myform col-12 col-md-6">
           <div class="myform__row col-12">
             <div class="myform__field mb-3">
-              <label for="form__nombre" class="form-label">Nombre</label>
+              <label data-bs-toggle="mytooltip" for="form__nombre" class="form-label" title="¿Cómo quieres que te llamemos?">Nombre ⓘ</label>
               <input
                 type="input"
                 class="form-control myform__field--box"
@@ -399,7 +399,7 @@ By Sebastián Sánchez -->
               />
             </div>
             <div class="myform__field mb-3">
-              <label for="form__email" class="form-label">Email</label>
+              <label data-bs-toggle="mytooltip" for="form__email" class="form-label" title="¿Dónde te contactamos de vuelta?">Email ⓘ</label>
               <input
                 type="email"
                 class="form-control myform__field--box"
@@ -410,7 +410,7 @@ By Sebastián Sánchez -->
             </div>
           </div>
           <div class="mb-3">
-            <label for="form__text" class="form-label">Tu mensaje</label>
+            <label data-bs-toggle="mytooltip" for="form__text" class="form-label" title="Explícanos un poco  tu solicitud?">Tu mensaje ⓘ</label>
             <textarea
               class="form-control myform__field--box"
               id="form__text"
@@ -449,9 +449,15 @@ By Sebastián Sánchez -->
             <i class="fa-brands fa-linkedin contact__subcontainer--icon"></i>
             <span class="contact__subcontainer--text">in/viajeschileCL/</span>
           </div>
+          <div class="contact__subcontainer">
+            <i class="fa-brands fa-instagram contact__subcontainer--icon"></i>
+            <span class="contact__subcontainer--text">@viajeschileCL/</span>
+          </div>  
         </div>
       </div>
     </section>
+    <!-- Para que tome estilo de Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
     <script type="module" src="./assets/js/main.js"></script>
   </body>
 </html>
